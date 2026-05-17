@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Word HTML Diff</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="workspace" aria-label="Document diff workspace">
+        <header class="topbar">
+          <div>
+            <h1>Document Diff</h1>
+            <p>Compare two HTML, text, PDF, or DOCX files with word-level highlighting.</p>
+          </div>
+          <button id="compareButton" class="primary" type="button">Compare</button>
+        </header>
+
+        <section class="pickers" aria-label="File pickers">
+          <label class="file-card">
+            <span class="label">Original</span>
+            <input id="leftFile" type="file" accept=".html,.htm,.txt,.md,.csv,.srt,.pdf,.docx">
+            <span id="leftName" class="filename">Choose a file</span>
+          </label>
+
+          <label class="file-card">
+            <span class="label">Changed</span>
+            <input id="rightFile" type="file" accept=".html,.htm,.txt,.md,.csv,.srt,.pdf,.docx">
+            <span id="rightName" class="filename">Choose a file</span>
+          </label>
+        </section>
+
+        <section id="status" class="status" role="status">Ready.</section>
+
+        <section class="summary" aria-label="Diff summary">
+          <div>
+            <span id="addedCount">0</span>
+            <small>added words</small>
+          </div>
+          <div>
+            <span id="removedCount">0</span>
+            <small>removed words</small>
+          </div>
+          <div>
+            <span id="sameCount">0</span>
+            <small>unchanged words</small>
+          </div>
+        </section>
+
+        <section class="viewbar" aria-label="Diff view mode">
+          <button id="inlineMode" class="mode-button active" type="button">Inline</button>
+          <button id="sideBySideMode" class="mode-button" type="button">Side by side</button>
+          <button id="allLinesMode" class="mode-button" type="button">All lines</button>
+        </section>
+
+        <section class="diff-panel" aria-label="Word level diff">
+          <div id="diffOutput" class="diff-output"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
