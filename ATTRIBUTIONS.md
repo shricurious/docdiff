@@ -11,7 +11,7 @@ This project includes and depends on open source libraries installed through npm
 | `mammoth` | Raw text extraction from `.docx` files. | 1.12.0 | BSD-2-Clause |
 | `pdf-parse` | Text extraction from `.pdf` files. | 1.1.4 | MIT |
 
-Dependency versions may resolve to newer compatible releases when `npm install` is run because `package.json` uses semver ranges. The locked versions above are from the current local `package-lock.json`.
+Dependency versions may resolve to newer compatible releases when `npm install` is run because `package.json` uses semver ranges. The tested versions above are from the local development install used to validate the app.
 
 ## Notes
 
